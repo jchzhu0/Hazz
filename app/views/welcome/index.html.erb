@@ -1,0 +1,47 @@
+
+
+<style>
+
+  .chart div {
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
+  }
+
+</style>
+
+
+
+
+
+<h1>Welcome#index,pp</h1>
+<p>Find me in app/views/welcome/index,pp.html.erb</p>
+
+<input type="button" id="b1" value="hh">
+
+
+<div class="chart">
+
+</div>
+
+
+
+<script >
+
+  var div = document.createElement("div");
+  div.innerHTML = "Hello, world!";
+  document.body.appendChild(div);
+
+  alert($('#b1').val('text'));
+
+  var data = [4, 8, 15, 16, 23, 42];
+  d3.select(".chart")
+      .selectAll("div")
+      .data(data)
+      .enter().append("div")
+      .style("width", function(d) { return d * 10 + "px"; })
+      .text(function(d) { return d; });
+</script>
